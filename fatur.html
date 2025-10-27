@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZetaLink - Operator WiFi Satelit Pertama Indonesia 🚀</title>
+    <style>
+        /* BASE STYLES */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Memperkuat latar belakang galaksi */
+            background: linear-gradient(to bottom, #00001a, #000033);
+            color: #e0f7fa; /* Warna teks yang lebih ringan untuk kontras */
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* STARFIELD ANIMATION */
+        .stars {
+            position: fixed; /* Menggunakan fixed agar bintang tetap di tempat saat scroll */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Membuat bintang lebih banyak dan lebih kecil */
+            background-image: 
+                radial-gradient(1.5px 1.5px at 10% 20%, #fff, transparent),
+                radial-gradient(1px 1px at 30% 60%, #eee, transparent),
+                radial-gradient(2px 2px at 50% 10%, #ddd, transparent),
+                radial-gradient(1.5px 1.5px at 70% 80%, #fff, transparent),
+                radial-gradient(1px 1px at 90% 40%, #eee, transparent),
+                /* Tambahan bintang untuk kepadatan */
+                radial-gradient(1px 1px at 5% 90%, #eee, transparent),
+                radial-gradient(2px 2px at 25% 45%, #ddd, transparent),
+                radial-gradient(1.5px 1.5px at 65% 5%, #fff, transparent),
+                radial-gradient(1px 1px at 85% 75%, #eee, transparent);
+            background-repeat: repeat;
+            background-size: 300px 300px; /* Ukuran yang lebih besar untuk efek spread */
+            animation: twinkle 6s infinite alternate; /* Animasi yang lebih lambat */
+            z-index: -1; /* Memastikan bintang berada di belakang konten */
+        }
+        @keyframes twinkle {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 80px 20px 60px; /* Padding yang lebih besar */
+            background: rgba(0, 0, 10, 0.7); /* Latar belakang yang lebih gelap */
+            border-bottom: 2px solid #00c4ff; /* Garis bawah neon */
+        }
+        h1 {
+            font-size: 4em; /* Ukuran font lebih besar */
+            color: #00c4ff; /* Neon Biru */
+            text-shadow: 0 0 15px #00c4ff, 0 0 5px #00c4ff; /* Efek neon yang lebih kuat */
+            margin-bottom: 5px;
+            letter-spacing: 3px;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #80deea;
+        }
+
+        /* CONTENT LAYOUT */
+        .content {
+            max-width: 1000px; /* Lebar konten yang lebih besar */
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* FEATURE BOXES */
+        .feature {
+            margin: 30px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05); /* Latar belakang transparan yang lebih halus */
+            border-radius: 15px;
+            border: 1px solid #00c4ff50; /* Border neon yang lebih samar */
+            box-shadow: 0 0 10px rgba(0, 196, 255, 0.2); /* Shadow neon */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 196, 255, 0.4);
+        }
+        .feature h2 {
+            color: #00e5ff; /* Warna judul yang menonjol */
+            border-bottom: 2px solid #00e5ff;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* PACKAGES */
+        .packages {
+            display: flex;
+            gap: 20px; /* Jarak antara paket */
+            justify-content: center; /* Memastikan paket berada di tengah */
+            margin: 30px 0;
+        }
+        .package {
+            background: rgba(0, 0, 15, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 45%; /* Menyesuaikan lebar */
+            border: 3px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .package:first-child { border-color: #0077c2; } /* Warna border berbeda */
+        .package:last-child { 
+            border-color: #ffaa00; /* Paket Premium menonjol */
+            box-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
+        }
+        .package h3 {
+            color: #00e5ff;
+            font-size: 1.5em;
+        }
+        .package p {
+            margin: 10px 0;
+        }
+        .package p:nth-child(2) {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffaa00; /* Harga warna emas */
+        }
+        
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            margin: 60px 0 40px;
+            padding: 20px;
+        }
+
+        /* LINKS */
+        a {
+            color: #00e5ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #ffaa00; /* Hover emas */
+            text-decoration: underline;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .packages {
+                flex-direction: column; /* Paket menjadi vertikal */
+                align-items: center;
+            }
+            .package {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <header>
+        <h1>PrimaNet</h1>
+        <p>Operator WiFi Satelit #1 Indonesia</p>
+    </header>
+    <div class="content">
+        <div class="feature">
+            <h2>Tentang PrimaNet ✨</h2>
+            <p>Dengan teknologi satelit canggih, PrimaNet menghadirkan koneksi WiFi super cepat hingga 250-720 Mbps—layaknya mengambil data langsung dari galaksi! Di mana pun Anda berada, dalam cuaca apa pun, WiFi kami tetap berjalan lancar dan cepat. Dirancang khusus untuk traveler pro dan gamer sejati yang membutuhkan kecepatan tanpa batas dan tanpa hambatan. PrimaNet adalah solusi konektivitas Anda di seluruh Indonesia!</p>
+        </div>
+        
+        <div class="feature">
+            <h2>Paket Harga 💰</h2>
+            <div class="packages">
+                <div class="package">
+                    <h3>Paket Dasar (Traveler Pro)</h3>
+                    <p class="price">Rp 579.000/bulan</p>
+                    <p>Kecepatan hingga 250 Mbps, ideal untuk traveller ringan-pro. Streaming, rapat online, dan berselancar bebas.</p>
+                </div>
+                <div class="package">
+                    <h3>Paket Premium (Gamer Sejati)</h3>
+                    <p class="price">Rp 1.799.000/bulan</p>
+                    <p>Kecepatan hingga 720 Mbps, sempurna untuk gamer sejati dan penggunaan profesional. Lag is a myth!</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="feature">
+            <h2>Mengapa PrimaNet? 🛰️</h2>
+            <ul>
+                <li><strong>Koneksi Ultra Cepat:</strong> Nikmati kecepatan hingga 720 Mbps, di mana pun Anda berada.</li>
+                <li><strong>Tanpa Batas Geografis:</strong> Menggunakan satelit, jangkauan kami mencakup seluruh pelosok Indonesia.</li>
+                <li><strong>Stabilitas Cuaca:</strong> Dirancang untuk performa optimal di segala kondisi cuaca.</li>
+                <li><strong>Pengalaman Gaming & Streaming Maksimal:</strong> Latensi rendah, kecepatan tinggi, pengalaman tanpa tanding.</li>
+            </ul>
+        </div>
+        
+        <div class="contact">
+            <h2>Tertarik? Hubungi Kami! 📞</h2>
+            <p>Email: <a href="mailto: PrimaNet@gmail.com">PrimaNet@gmail.com</a></p>
+            <p>Telepon: +62 8**-***-***-** (Kirimkan pesan WhatsApp untuk respons cepat)</p>
+            <p>Sosial Media: Kunjungi laman kami di <a href="https://www.instagram.com/PrimaNet" target="_blank" rel="noopener noreferrer">Instagram (@PrimaNet)</a></p>
+        </div>
+    </div>
+</body>
+</html>
